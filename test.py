@@ -25,37 +25,36 @@ for root, dirs, files in os.walk("."):
     path = root.split(os.sep)
     dir = (len(path) - 1) , 'dir', os.path.basename(root)
     for file in files:
-         test = len(path) , '---', file
+         serchedStrings = len(path) , '---', file
          filename = os.path.join(root, file)
          filename = filename.replace('./','')
-       #  filename = filename.replace('www.tidigmodernakonkurser.se','')
-         if test.__contains__(1) & test.__contains__('---'):
+         if searchedStrings.__contains__(1) & searchedStrings.__contains__('---'):
              substring = 'html'
-             if substring in test[2]:
+             if substring in searchedStrings[2]:
              	print filename
-                replaceLinks(filename, test[0])
+                replaceLinks(filename, searchedStrings[0])
 
-         if test.__contains__(2) & test.__contains__('---'):
+         if searchedStrings.__contains__(2) & searchedStrings.__contains__('---'):
              substring = 'html'
-             if substring in test[2]:
+             if substring in searchedStrings[2]:
              	print filename
-                replaceLinks(filename,test[0])
+                replaceLinks(filename,searchedStrings[0])
 
-         if test.__contains__(3) & test.__contains__('---'):
+         if searchedStrings.__contains__(3) & searchedStrings.__contains__('---'):
              substring = 'html'
-             if substring in test[2]:
+             if substring in searchedStrings[2]:
              	 print filename
-                 replaceLinks(filename, test[0])
-         if test.__contains__(4) & test.__contains__('---'):
+                 replaceLinks(filename, searchedStrings[0])
+         if searchedStrings.__contains__(4) & searchedStrings.__contains__('---'):
              substring = 'html'
-             if substring in test[2]:
+             if substring in searchedStrings[2]:
              	 print filename
-                 replaceLinks(filename, test[0])
-         if test.__contains__(5) & test.__contains__('---'):
+                 replaceLinks(filename, searchedStrings[0])
+         if searchedStrings.__contains__(5) & searchedStrings.__contains__('---'):
              substring = 'html'
-             if substring in test[2]:
+             if substring in searchedStrings[2]:
              	 print filename
-                 replaceLinks(filename, test[0])        
+                 replaceLinks(filename, searchedStrings[0])        
 
 
 
